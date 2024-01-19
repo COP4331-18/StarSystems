@@ -1,5 +1,5 @@
 const urlBase = "http://cop4331-18.xyz/LAMPAPI";
-const extension = "php";
+const extension = ".php";
 
 let userId = 0;
 let firstName = "";
@@ -13,33 +13,42 @@ function doLogin() {
   lastName = "";
 
   let login = document.getElementById("userName").value;
+  console.log(login);
   let password = document.getElementById("userPassword").value;
+  console.log(password);
 
   let tmp = { login: login, password: password };
 
   let jsonPayload = JSON.stringify(tmp);
 
+  console.log(tmp);
+
   let url = urlBase + "/Login" + extension;
 
   let xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-type", "application/json;  charset-UTF-8");
+  xhr.setRequestHeader("Content-type", "application/json; charset-UTF-8");
   try {
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         let jsonObject = JSON.parse(xhr.responseText);
-        userId = jsonObject.id;
-      }
-      if (userId < 1) {
-        alert("User/password combination incorrect");
-        return;
-      }
+        userId = jsonObject.ID;
+        console.log("This is the saved userId " + userId);
 
-      firstName = jsonObject.firstName;
-      lastName = jsonObject.lastName;
+        console.log("What is returned from the server: " + jsonObject);
+
+        if (userId < 1) {
+          alert("User/Password combination incorrect");
+          return;
+        }
+        firstName = jsonObject.FirstName;
+        console.log(FirstName);
+        lastName = jsonObject.LastName;
+        console.log(LastName);
+        alert("You have logged in");
+      }
 
       // window.location.href = "signup"
-      alert("You logged in");
     };
     xhr.send(jsonPayload);
   } catch (err) {
