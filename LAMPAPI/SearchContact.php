@@ -11,10 +11,9 @@ $conn = new mysqli("localhost", "NotTheBeast", "WeLoveCOP4331", "COP4331");
 if ($conn->connect_error) {
     returnWithError($conn->connect_error);
 } else {
-    // Extract search term from JSON data
 
     $stmt = $conn->prepare("SELECT * FROM Contacts WHERE (Name LIKE ? OR Phone LIKE ? OR Email LIKE ?) AND UserID LIKE ?");
-    $likePattern = "%" . $search_term . "%";
+    $likePattern = "%" . $inData["search"] . "%"; 
     $stmt->bind_param("ssss", $likePattern, $likePattern, $likePattern, $inData["UserID"]);
     $stmt->execute();
 
@@ -36,10 +35,8 @@ if ($conn->connect_error) {
         returnWithInfo($searchResults);
     }
 
-    sendResultInfoAsJson(json_encode($Contacts));
     $stmt->close();
     $conn->close();
-    returnWithError("");
 }
 
 function getRequestInfo() {
@@ -57,7 +54,7 @@ function returnWithError($err) {
 }
 
 function returnWithInfo( $searchResults ){
-        $retValue = '{"results":[' . $searchResults . '],"error":""}';
-        sendResultInfoAsJson( $retValue );
+    $retValue = '{"results":[' . $searchResults . '],"error":""}';
+    sendResultInfoAsJson( $retValue );
 }
 ?>
