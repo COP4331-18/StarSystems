@@ -7,8 +7,6 @@ let lastName = "";
 
 const loginButton = document.getElementById("mainButton");
 
-loginButton.addEventListener("click", doLogin());
-
 function doLogin() {
   userId = 0;
   firstName = "";
@@ -48,3 +46,5 @@ function doLogin() {
     alert("Something bad has gone wrong");
   }
 }
+
+loginButton.addEventListener("click", doLogin);
