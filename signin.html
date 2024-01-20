@@ -9,11 +9,19 @@
   </head>
   <body>
     <div class="mainContainer">
-      <img class="iconImage" src="/images/accountImg.png" alt="" />
-      <div class="container">
+      <img
+        id="iconImage"
+        class="iconImageContent"
+        src="/images/accountImg.png"
+        alt=""
+      />
+      <div id="containerContent" class="container">
         <div class="itemContainer">
           <div class="loginTitle">
             <span class="blueText">Sign-in</span> to your account
+          </div>
+          <div id="errorMessage" class="errorContent">
+            Username/Password combination incorrect
           </div>
           <form id="loginDiv">
             <div class="loginText marginTop">Username</div>
