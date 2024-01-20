@@ -24,8 +24,11 @@
 
 .mainContainer {
   height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-top: 72px;
+  flex-direction: column;
 }
 
 /*
@@ -55,7 +58,7 @@ body {
   height: 380px;
   width: 400px;
   padding-top: 30px;
-  margin-top: 98px;
+
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background-color: rgb(249 250 251);
@@ -91,4 +94,22 @@ body {
 .loginTitle {
   font-size: 24px;
   font-weight: 600px;
+}
+
+.iconImage {
+  width: 120px;
+  max-width: 120px;
+}
+
+.registerButton {
+  margin-top: 30px;
+}
+
+.registerButton a {
+  text-decoration: none;
+}
+
+.registerButton a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
