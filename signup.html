@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up</title>
     <link rel="stylesheet" href="css/login.css" />
+    <script src="./js/login.js" defer></script>
   </head>
   <body>
     <div class="mainContainer">
-      <div class="container">
+      <img
+        id="iconImg"
+        class="iconImageContent"
+        src="/images/accountImg.png"
+        alt=""
+      />
+      <div id="containerContent" class="container">
         <div class="itemContainer">
           <div class="loginTitle">
             <span class="blueText">Sign-in</span> to your account
+          </div>
+          <div id="errorMessage" class="errorContent">
+            Username/Password combination incorrect
           </div>
           <form id="loginDiv">
             <div class="loginText marginTop">Username</div>
@@ -20,6 +30,10 @@
             <input type="password" class="userInput" id="userPassword" s />
           </form>
           <button id="mainButton" class="loginButton">Continue</button>
+          <div class="registerButton">
+            Don't have an account?
+            <a class="blueText" href="signup.html"> Sign Up</a>
+          </div>
         </div>
       </div>
     </div>
