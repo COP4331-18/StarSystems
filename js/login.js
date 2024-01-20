@@ -16,7 +16,7 @@ inputButtons.forEach((button) => {
 // Removes the password incorret erros
 function removeError() {
   document.getElementById("errorMessage").style.display = "none";
-  document.getElementById("IconImg").classList.remove("addShake");
+  document.getElementById("iconImg").classList.remove("addShake");
   document.getElementById("containerContent").classList.remove("addShake");
 }
 
@@ -27,7 +27,7 @@ function displayError() {
   // Shake animation
   // add class to img IconImg
   // add class to containerContent
-  document.getElementById("IconImg").classList.add("addShake");
+  document.getElementById("iconImg").classList.add("addShake");
   document.getElementById("containerContent").classList.add("addShake");
 }
 
