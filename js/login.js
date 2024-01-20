@@ -6,6 +6,30 @@ let firstName = "";
 let lastName = "";
 
 const loginButton = document.getElementById("mainButton");
+const inputButtons = document.querySelectorAll(".userInput");
+
+// Once the input buttons are selected remove all the errors if they are placed.
+inputButtons.forEach((button) => {
+  button.addEventListener("focus", removeError);
+});
+
+// Removes the password incorret erros
+function removeError() {
+  document.getElementById("errorMessage").style.display = "none";
+  document.getElementById("IconImg").classList.remove("addShake");
+  document.getElementById("containerContent").classList.remove("addShake");
+}
+
+// Adds a shake to the elements and displays error messages.
+function displayError() {
+  document.getElementById("errorMessage").style.display = "block";
+
+  // Shake animation
+  // add class to img IconImg
+  // add class to containerContent
+  document.getElementById("IconImg").classList.add("addShake");
+  document.getElementById("containerContent").classList.add("addShake");
+}
 
 function doLogin() {
   userId = 0;
@@ -38,13 +62,13 @@ function doLogin() {
         console.log("What is returned from the server: " + jsonObject);
 
         if (userId < 1) {
-          alert("User/Password combination incorrect");
+          displayError();
           return;
         }
         firstName = jsonObject.FirstName;
-        console.log(FirstName);
+        console.log(firstName);
         lastName = jsonObject.LastName;
-        console.log(LastName);
+        console.log(lastName);
         alert("You have logged in");
       }
 
