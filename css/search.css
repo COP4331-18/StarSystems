@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.containerSearch {
+  height: 200px;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBarContent {
+  width: 500px;
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#searchBar {
+  width: 100%;
+}
+
+.searchBarContent input {
+  font-size: 20px;
+  padding: 5px 40px 5px 10px;
+  border-radius: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tableHeading {
+  line-height: 2;
+}
+
+.searchBarContent input:focus {
+  outline: none;
+}
+
+.containerSearch .material-symbols-outlined {
+  position: absolute;
+  right: 15px;
+}
+
+.tableHeadingContainer {
+  background-color: teal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newContact {
+  margin-top: 20px;
+}
+
+.newContact button {
+  padding: 5px 20px 5px 20px;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.modalInput {
+  border-radius: 40px;
+  font-size: 14px;
+  padding: 20px 45px 20px 20px;
+  margin-top: 15px;
+}
+
+.roundedBtn {
+  width: 30px;
+  height: 30px;
+  background: #009578;
+  display: inline-flex;
+  justify-content: center;
+  color: black;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.roundedBtn:hover {
+  background: #00866c;
+}
