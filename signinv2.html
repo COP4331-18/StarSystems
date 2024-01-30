@@ -14,56 +14,59 @@
 
   <body>
     <div class="container">
-        <div class="stars">
-          <span style="--i: 11"></span>
-          <span style="--i: 12"></span>
-          <span style="--i: 24"></span>
-          <span style="--i: 10"></span>
-          <span style="--i: 14"></span>
-          <span style="--i: 23"></span>
-          <span style="--i: 18"></span>
-          <span style="--i: 16"></span>
-          <span style="--i: 19"></span>
-          <span style="--i: 20"></span>
-          <span style="--i: 22"></span>
-          <span style="--i: 25"></span>
-          <span style="--i: 18"></span>
-          <span style="--i: 21"></span>
-          <span style="--i: 15"></span>
-          <span style="--i: 13"></span>
-          <span style="--i: 26"></span>
-          <span style="--i: 17"></span>
-          <span style="--i: 13"></span>
-          <span style="--i: 28"></span>
-          <span style="--i: 11"></span>
-          <span style="--i: 12"></span>
-          <span style="--i: 24"></span>
-          <span style="--i: 10"></span>
-          <span style="--i: 14"></span>
-          <span style="--i: 23"></span>
-          <span style="--i: 18"></span>
-          <span style="--i: 16"></span>
-          <span style="--i: 19"></span>
-          <span style="--i: 20"></span>
-          <span style="--i: 22"></span>
-          <span style="--i: 25"></span>
-          <span style="--i: 18"></span>
-          <span style="--i: 21"></span>
-          <span style="--i: 15"></span>
-          <span style="--i: 13"></span>
-          <span style="--i: 26"></span>
-          <span style="--i: 17"></span>
-          <span style="--i: 13"></span>
-          <span style="--i: 28"></span>
-        </div>
+      <div class="stars">
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 25"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 21"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 26"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 28"></span>
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 25"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 21"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 26"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 28"></span>
       </div>
-    <div class="wrapper">
+    </div>
+    <div class="forms-container">
+    <div class="wrapper" id="login-form">
       <form action="">
         <h1>Login</h1>
+
         <div class="input-box">
           <input type="text" placeholder="Username" required />
           <i class="bx bxs-user"></i>
         </div>
+
         <div class="input-box">
           <input type="Password" placeholder="Password" required />
           <i class="bx bxs-lock-alt"></i>
@@ -77,9 +80,41 @@
         <button type="submit" class="btn">Login</button>
 
         <div class="register-link">
-          <p>Don't have an account? <a href="#">Register</a></p>
+          <p>Don't have an account? <a href="#" id="open-register">Register</a></p>
         </div>
       </form>
     </div>
+
+        <div class="wrapper" id="register-form">
+            <form action="">
+                <h1>Register</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required />
+                    <i class="bx bxs-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required />
+                    <i class="bx bx-envelope"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required />
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Confirm Password" required />
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+                <div class="register-link">
+                    <p>Already have an account? <a href="#" id="open-login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/signinv2.js"></script>
   </body>
 </html>
