@@ -1,0 +1,81 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Svg motion */
+svg {
+  width: 720px;
+  height: 720px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#label {
+  fill: white;
+}
+
+#record {
+  transform-origin: center center;
+  animation: spin 4s linear infinite;
+}
+
+.line {
+  stroke: white;
+}
+
+.mainContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.leftSide {
+  flex: 1;
+  background: #ff984c;
+  display: flex;
+}
+
+.rightSide {
+  flex: 1;
+  z-index: -2;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #48ebfa;
+}
+
+.leftSide .container {
+  margin: 10px;
+  border-radius: 10px;
+  border: 10px solid white;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title h2 {
+  font-size: 72px;
+}
+
+.spinningRecord {
+  z-index: -1;
+  position: absolute;
+  right: 100px;
+}
