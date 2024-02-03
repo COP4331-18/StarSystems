@@ -4,16 +4,13 @@
   box-sizing: border-box;
 }
 
-html,
 body {
-  height: 100%;
-  width: 100%;
+  overflow: hidden;
 }
-
 /* Svg motion */
 svg {
-  width: 720px;
-  height: 720px;
+  height: auto;
+  width: 100%;
 }
 
 @keyframes spin {
@@ -51,6 +48,7 @@ svg {
 .rightSide {
   flex: 1;
   z-index: -2;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -77,5 +75,6 @@ svg {
 .spinningRecord {
   z-index: -1;
   position: absolute;
-  right: 100px;
+  width: 800px;
+  right: 300px;
 }

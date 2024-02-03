@@ -5,9 +5,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background: #0c192c;
+}
 .containerSearch {
   height: 200px;
-  background-color: purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,12 +22,17 @@
 
 .searchBarContent {
   width: 500px;
-  background-color: #fff;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.searchBtn {
+  text-decoration: none;
+  outline: none;
+  color: black;
 }
 
 #searchBar {
@@ -37,6 +49,7 @@
 
 .tableHeading {
   line-height: 2;
+  color: #fff;
 }
 
 .searchBarContent input:focus {
@@ -49,19 +62,21 @@
 }
 
 .tableHeadingContainer {
-  background-color: teal;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.newContact {
-  margin-top: 20px;
+.newContact button {
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.newContact button {
-  padding: 5px 20px 5px 20px;
+.newContact {
+  vertical-align: center;
 }
 
 .modal-body {
@@ -80,7 +95,7 @@
 .roundedBtn {
   width: 30px;
   height: 30px;
-  background: #009578;
+  background: #0068ff;
   display: inline-flex;
   justify-content: center;
   color: black;
@@ -94,5 +109,45 @@
 }
 
 .roundedBtn:hover {
-  background: #00866c;
+  background: #1700ff;
+}
+
+.table td,
+tr {
+  color: black;
+}
+
+table {
+  background-color: white;
+}
+
+.tableContent {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.deleteBtn {
+  background-color: #ff090a;
+}
+
+.deleteBtn:hover {
+  background-color: #b50001;
+}
+
+.saveBtn {
+  background-color: #33a901;
+}
+
+.saveBtn:hover {
+  background-color: #174c00;
+}
+
+.tableInput {
+  outline: none;
+  width: 100%;
+  border: 2px solid black(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 10px 11.25px 10px 10px;
+  font-size: 16px;
+  color: black;
 }

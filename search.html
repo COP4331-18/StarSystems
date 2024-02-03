@@ -47,109 +47,125 @@
     <link rel="stylesheet" href="/css/search.css" />
   </head>
   <body>
-    <div class="containerSearch">
-      <div class="searchBarContent">
-        <input type="text" id="searchBar" placeholder="Search" />
-        <span class="material-symbols-outlined"> search </span>
+    <div class="container mainContainer">
+      <div class="containerSearch">
+        <div class="searchBarContent">
+          <input type="text" id="searchBar" placeholder="Search" />
+          <a href="#" class="searchBtn material-symbols-outlined"> search </a>
+        </div>
       </div>
-    </div>
 
-    <div class="tableHeadingContainer">
-      <h1 class="tableHeading">Contacts</h1>
+      <div class="tableHeadingContainer">
+        <h1 class="tableHeading">Contacts</h1>
 
-      <div class="tableHeading newContact">
-        <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <i class="bx bx-plus"></i>New
-        </button>
+        <div class="tableHeading newContact">
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bx bx-plus"></i>New
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div
-      class="modal fade"
-      data-bs-backdrop="static"
-      id="exampleModal"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Create Contact</h5>
-            <button
-              id="closeBtn"
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <input
-              class="modalInput"
-              type="text"
-              id="contactInputFirst"
-              placeholder="First Name"
-            />
-            <input
-              class="modalInput"
-              type="text"
-              id="contactInputLast"
-              placeholder="Last Name"
-            />
-            <input
-              class="modalInput"
-              type="gmail"
-              id="contactInputEmail"
-              placeholder="you@gmail.com"
-            />
-            <input
-              class="modalInput"
-              type="tel"
-              id="contactInputPhone"
-              placeholder="(407)-555-5555"
-              maxlength="10"
-            />
-          </div>
-          <div class="modal-footer">
-            <button
-              data-bs-dismiss="modal"
-              id="btnCreate"
-              type="button"
-              class="btn btn-primary"
-            >
-              Create
-            </button>
+      <div
+        class="modal fade"
+        data-bs-backdrop="static"
+        id="exampleModal"
+        tabindex="-1"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create Contact</h5>
+              <button
+                id="closeBtn"
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <input
+                class="modalInput"
+                type="text"
+                id="contactInputFirst"
+                placeholder="First Name"
+              />
+              <input
+                class="modalInput"
+                type="text"
+                id="contactInputLast"
+                placeholder="Last Name"
+              />
+              <input
+                class="modalInput"
+                type="gmail"
+                id="contactInputEmail"
+                placeholder="you@gmail.com"
+              />
+              <input
+                class="modalInput"
+                type="tel"
+                id="contactInputPhone"
+                placeholder="(407)-555-5555"
+                maxlength="10"
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                data-bs-dismiss="modal"
+                id="btnCreate"
+                type="button"
+                class="btn btn-primary"
+              >
+                Create
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <table class="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>FIRST NAME</th>
-            <th>LAST NAME</th>
-            <th>EMAIL</th>
-            <th>PHONE</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Kyle</td>
-            <td>Cook</td>
-            <td>kylecook@gmail.com</td>
-            <td>407-558-5554</td>
-            <td>
-              <button class="roundedBtn">
-                <ion-icon name="create-sharp"></ion-icon>
-              </button>
-              <button class="roundedBtn">
-                <ion-icon name="person-remove-sharp"></ion-icon>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="container">
+        <div class="table-responsive tableContent">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kyle</td>
+                <td>Cook</td>
+                <td>kylecook@gmail.com</td>
+                <td>407-558-5554</td>
+                <td>
+                  <button class="roundedBtn">
+                    <ion-icon
+                      name="create-sharp"
+                      role="img"
+                      class="md hydrated"
+                    ></ion-icon>
+                  </button>
+
+                  <button class="roundedBtn saveBtn">
+                    <ion-icon name="checkmark-sharp"></ion-icon>
+                  </button>
+                  <button class="roundedBtn deleteBtn">
+                    <ion-icon
+                      name="person-remove-sharp"
+                      role="img"
+                      class="md hydrated"
+                    ></ion-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
 </html>

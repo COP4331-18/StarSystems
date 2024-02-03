@@ -34,11 +34,6 @@ html {
   box-sizing: border-box;
   z-index: 2;
   position: relative;
-  transition: left 0.3s ease-in-out;
-  align-items: center;
-  display: flex;
-  transition: height .2s ease;
-  flex-direction: column;
 }
 
 .wrapper h1 {
@@ -83,39 +78,27 @@ html {
   font-size: 20px;
 }
 
-.wrapper .remember-forget {
+.wrapper .remember-forgot {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  margin: 20px;
-}
-
-.remember-forget label {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.remember-forget label input[type="checkbox"] {
-  margin-right: 5px;
-  accent-color: #162938;
-}
-
-.remember-forget label input {
-  accent-color: #162938;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  font-size: 14.5px;
+  margin: 20px 0;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  display: flex;
+  align-items: center;
   margin-right: 3px;
 }
 
-.remember-forget a {
+.remember-forgot a {
   color: #fff;
   text-decoration: none;
 }
 
-.remember-forget a:hover {
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 
@@ -136,7 +119,7 @@ html {
 .wrapper .register-link {
   font-size: 14.5px;
   text-align: center;
-  margin: 30px 0 20px;
+  margin-top: 20px 0 15px;
 }
 
 .register-link p a {
@@ -251,19 +234,4 @@ html {
     transform: translateY(0vh) scale(0);
     opacity: 0;
   }
-}
-
-.wrapper.forms-container {
-  position: relative;
-  width: 420px; 
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-}
-
-#register-form {
-  display: none;
 }
