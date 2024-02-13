@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Sign-In</title>
+    <link rel="shortcut icon" href="images/V2.png">
+    <link rel="stylesheet" href="/css/signinv2.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="js/login2.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav class="navigation">
+          <a href="about_us.html">About</a>
+        </nav>
+      </header>
+      <div class="stars">
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 25"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 21"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 26"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 28"></span>
+        <span style="--i: 11"></span>
+        <span style="--i: 12"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 14"></span>
+        <span style="--i: 23"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 16"></span>
+        <span style="--i: 19"></span>
+        <span style="--i: 20"></span>
+        <span style="--i: 22"></span>
+        <span style="--i: 25"></span>
+        <span style="--i: 18"></span>
+        <span style="--i: 21"></span>
+        <span style="--i: 15"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 26"></span>
+        <span style="--i: 17"></span>
+        <span style="--i: 13"></span>
+        <span style="--i: 28"></span>
+      </div>
+    </div>
+    <div class="forms-container">
+      <div class="wrapper" id="login-form">
+        <form>
+          <h1>Login</h1>
+
+          <div id="invalidText" class="invalid">
+            Invalid username/password
+          </div>
+          <div id="invalidText" class="input-box">
+            <input id="userName" requried type="text" placeholder="Username" />
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              id="userPassword"
+              requried
+              type="Password"
+              placeholder="Password"
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <button id="loginBtn" type="button" class="btn">Login</button>
+
+          <div class="register-link">
+            <p>
+              Don't have an account? <a href="about_us.html" id="open-register">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="wrapper" id="register-form">
+        <form action="">
+          <h1>Register</h1>
+          <div id="validSignUp" class="invalid">
+              Account created.
+          </div>
+          <div class="input-box">
+            <input
+              id="firstName"
+              type="text"
+              placeholder="First Name"
+              required
+            />
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <input id="lastName" type="text" placeholder="Last Name" />
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              id="newUser"
+              type="text"
+              placeholder="Username"
+              required
+            />
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              id="newPassword"
+              type="password"
+              placeholder="Password"
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <button id="registerBtn" type="button" class="btn">Register</button>
+          <div class="register-link">
+            <p>
+              Already have an account? <a href="#" id="open-login">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
